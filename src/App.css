@@ -1,38 +1,102 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Raleway:wght@300;400;500;600;700&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  /* font-family:'Montserrat', sans-serif; */
+  font-family: "Raleway", sans-serif;
+  transition: 0.3s ease;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* sizing the projects */
+
+:root {
+  --yellowColor: #e1f296;
+  --lightGreenColor: #5aba8a;
+  --darkGreenColor: #01565b;
+  --textColor: #044561;
+  --h1Color: #012e33;
+  --cradColor: #4c9fa7;
+  --whiteColor: hs1(0, 0%, 100%);
+  --greyText: rgb(190, 190, 190);
+  --inputColor: hs1(224, 39%, 88%);
+
+  /* font and typography */
+  --h1FontSize: 2.5rem;
+  --h2FontSize: 1.25rem;
+  --h3FontSize: 1rem;
+  --normallFontSize: 0.938rem;
+  --smallFontSize: 0.813rem;
+  --smallestFontSize: 0.75rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+html {
+  font-size: 90%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+.icon {
+  font-size: var(--h2FontSize);
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+.flex {
   display: flex;
-  flex-direction: column;
+  align-items: center;
+}
+
+.grid {
+  display: grid;
+  align-items: center;
+}
+
+.btn {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px var(--darkGreenColor);
+  padding: 0.8rem 1rem;
+  font-weight: 600;
+  color: var(--textColor);
+}
+
+.btn .icon {
+  margin-left: 0.5rem;
+}
+
+.btn:hover {
+  background: palegreen;
+  color: var(--darkGreenColor);
+}
+
+.container {
+  position: relative;
+  width: 100vw;
+  height: 95vh;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 2rem 1rem;
+  overflow: hidden;
+}
+
+body {
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  margin: auto;
+  padding: 1rem;
 }

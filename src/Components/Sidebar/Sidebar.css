@@ -1,0 +1,80 @@
+:root {
+  --yellowColor: #e1f296;
+  --lightGreenColor: #5aba8a;
+  --darkGreenColor: #01565b;
+  --textColor: #044561;
+  --h1Color: #012e33;
+  --cradColor: #4c9fa7;
+  --whiteColor: hs1(0, 0%, 100%);
+  --greyText: rgb(190, 190, 190);
+  --inputColor: hs1(224, 39%, 88%);
+  /* font and typography */
+  --h1FontSize: 2.5rem;
+  --h2FontSize: 1.25rem;
+  --h3FontSize: 1rem;
+  --normallFontSize: 0.938rem;
+  --smallFontSize: 0.813rem;
+  --smallestFontSize: 0.75rem;
+}
+
+.sideBarr {
+  width: 6%;
+  height: auto;
+  display: grid;
+  align-items: flex-start;
+}
+.sideBarr .logoDiv {
+  padding: 1rem;
+  justify-content: center;
+}
+.sideBarr .logoDiv .img {
+  width: 40px;
+}
+.sideBarr .menu {
+  width: 100%;
+}
+.sideBarr .menu .navItem .navList {
+  display: none;
+  position: relative;
+  display: grid;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  padding: 1rem 0;
+  cursor: pointer;
+  overflow: hidden;
+}
+.sideBarr .menu .navItem .navList::after {
+  display: none;
+  position: absolute;
+  content: "";
+  top: 50%;
+  right: 0;
+  width: 3px;
+  height: 25%;
+  border-radius: 10px;
+  transition: 0.3s ease;
+  background-color: var(--lightGreenColor);
+}
+.sideBarr .menu .navItem .navList::before {
+  display: none;
+  position: absolute;
+  content: "";
+  bottom: 50%;
+  right: 0;
+  width: 3px;
+  height: 25%;
+  border-radius: 10px;
+  transition: 0.3s ease;
+  background-color: var(--darkGreenColor);
+}
+.sideBarr .menu .navItem .navList .icon {
+  width: 100%;
+  color: var(--greyText);
+}
+.sideBarr .menu .navItem .navList:hover::after, .sideBarr .menu .navItem .navList:hover::before {
+  display: block;
+}
+.sideBarr .menu .navItem .navList:hover .icon {
+  color: var(--darkGreenColor);
+}/*# sourceMappingURL=Sidebar.css.map */
